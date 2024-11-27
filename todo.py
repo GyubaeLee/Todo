@@ -1,5 +1,25 @@
+# Main 함수 구현 메뉴별 기본 기능 설계
+# 메뉴별 입력값 및 Todo 기초 툴 구현
+import json
+import os # 파이썬을 이용해서 시스템 내부에 접근이 가능하다
+
+task_file = 'tasks.json'
+
+def load_task():
+    if os.path.exists(task_file): #파일이 있는 경우
+        with open(task_file, 'r', encoding='utf-8') as file: #file => open(task_file, 'r', encoding='utf-8')
+            return json.load(file) #json.load()
+    return {}
+        
+def save_task(tasks): #add_task를 통해 전달받은 해야할 일을 파일에 저장하는 기능
+    with open(task_file, 'w', encoding='utf-8') as file: #file => open(TASK_FILE, 'w', encoding='utf-8')
+        json.dump(tasks, file, indent=4, ensure_ascii=False)
+        
 def add_task(task_name): # 할 일 추가
-    pass
+    tasks = load_task() # 파일이 있다면 가져와
+    task = {'name' : "파이썬 공부하기", 'completed' : False} #파이썬 공부하기에 대한 데이터가 들어갔어
+    tasks.append(task)
+    save_task(tasks)
 
 def view_task(): # 할 일 목록 보기
     pass
@@ -30,7 +50,7 @@ def main():
             view_task()
         elif choice == '3':
             task_number = int(input("완료를 원하는 작업의 번호를 입력해주세요."))
-            complete_task(task_number)
+            complete_task(task_number)           
         elif choice == '4':
             task_number = int(input("삭제를 원하는 작업의 번호를 입력해주세요."))
             delete_task(task_number)
