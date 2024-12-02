@@ -6,10 +6,10 @@ import os # 파이썬을 이용해서 시스템 내부에 접근이 가능하다
 task_file = 'tasks.json'
 
 def load_task():
-    if os.path.exists(task_file): #파일이 있는 경우
+    if os.path.exists('tasks.json'): #파일이 있는 경우
         with open(task_file, 'r', encoding='utf-8') as file: #file => open(task_file, 'r', encoding='utf-8')
             return json.load(file) #json.load()
-    return {}
+    return []
         
 def save_task(tasks): #add_task를 통해 전달받은 해야할 일을 파일에 저장하는 기능
     with open(task_file, 'w', encoding='utf-8') as file: #file => open(TASK_FILE, 'w', encoding='utf-8')
@@ -17,12 +17,20 @@ def save_task(tasks): #add_task를 통해 전달받은 해야할 일을 파일�
         
 def add_task(task_name): # 할 일 추가
     tasks = load_task() # 파일이 있다면 가져와
-    task = {'name' : "파이썬 공부하기", 'completed' : False} #파이썬 공부하기에 대한 데이터가 들어갔어
+    task = {'name' : task_name, 'completed' : False} #파이썬 공부하기에 대한 데이터가 들어갔어
     tasks.append(task)
     save_task(tasks)
 
 def view_task(): # 할 일 목록 보기
-    pass
+    tasks = load_task() # 파일이 있는 경우 안에 내용물이 tasks에 들어가고 없으면 빈 리스트가 들어감
+    if not tasks: #tasks는 if문을 만나면 결과는 ??
+        print("현재 등록된 작업이 없습니다.")
+    else :
+        print("작업 목록 :")
+        for i, task in enumerate(tasks, start=1): #enumerate() / tasks = [task, task...]
+            #enumerate() -> i = 1, task = {"name" : "파이썬 공부하기", "completed" : false } 딕셔너리
+                status = "완료" if task ['completed'] else "미완료" # 키값을 넣으면 자동적으로 반환 (출력 또는 돌려주기)
+                print(f"{i}. {task['name']} - {status}") # => 1. 파이썬 공부하기 - 미완료
 
 def complete_task(task_number): # 할 일 완료
     pass
