@@ -1,9 +1,10 @@
 [
-
     {
         "name": "파이썬 공부하기",
+        "completed": true
+    },
+    {
+        "name": "주식 터하기",
         "completed": false
-
     }
-
 ]
