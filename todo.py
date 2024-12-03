@@ -21,20 +21,34 @@ def add_task(task_name): # 할 일 추가
     tasks.append(task)
     save_task(tasks)
 
+<<<<<<< HEAD
 def view_task(): # 할 일 목록 보기
+=======
+def view_task(): # 할 일 목록 보기, merge 진행
+>>>>>>> feature/complete-tasks
     tasks = load_task() # 파일이 있는 경우 안에 내용물이 tasks에 들어가고 없으면 빈 리스트가 들어감
     if not tasks: #tasks는 if문을 만나면 결과는 ??
         print("현재 등록된 작업이 없습니다.")
     else :
         print("작업 목록 :")
         for i, task in enumerate(tasks, start=1): #enumerate() / tasks = [task, task...]
+<<<<<<< HEAD
             #enumerate() -> i = 1, task = {"name" : "파이썬 공부하기", "completed" : false } 딕셔너리
+=======
+            #enumerate() -> i = 1, task = {"name" : "파이썬 공부하기", "completed" : false} 딕셔너리
+>>>>>>> feature/complete-tasks
                 status = "완료" if task ['completed'] else "미완료" # 키값을 넣으면 자동적으로 반환 (출력 또는 돌려주기)
                 print(f"{i}. {task['name']} - {status}") # => 1. 파이썬 공부하기 - 미완료
 
 def complete_task(task_number): # 할 일 완료
-    pass
-
+    tasks = load_task() #task s= {"name" : "파이썬 공부하기", "completed" : True, }
+    if 1 <= task_number <= len(tasks): #3번 입력한 경우는? 너 번호 잘못 입력했어 다시 입력해
+        tasks[task_number - 1]["completed"] = True #tasks[0] ==>{"name" : "파이썬 공부하기", "completed" : false}
+        save_task(tasks)
+        print(f"할 일 : {tasks[task_number-1]["name"]}'이(가) 완료 처리되었습니다.")
+    else :
+        print("유효하지 않은 번호입니다. 다시 확인 후 입력해주세요")
+        
 def delete_task(task_number):
     pass
 
