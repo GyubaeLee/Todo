@@ -27,8 +27,14 @@ def view_task(): # 할 일 목록 보기
 def complete_task(task_number): # 할 일 완료
     pass
 
-def delete_task(task_number):
-    pass
+def delete_task(task_number): # 할 일 삭제 -> 함수????? / tasks.insert() / len()
+    tasks = load_task()
+    if 1 <= task_number <= len(tasks): # 1<task_number<1 / tasks => [{}]
+        delete_tsk = tasks.pop(task_number-1) #index 값 넣어야해요 / pop()통해서 삭제 및 변환이 되고 삭제가 된 데이터가 delete_tsk에 들어간다 -> [{}] -> []
+        save_task(tasks) # tasks.pop(task_number-1) => [{"name": "파이썬 공부하기", "completed": true}] => [] => tasks
+        print(f"할 일 : '{delete_tsk['name']}'이(가) 사라졌습니다.")
+    else:
+        print("유효하지 않은 작업 번호입니다. 다시 확인해주세요")
 
 def show_menu(): #메뉴를 보여주는 함수
     print("작업 관리 어플리케이션")
