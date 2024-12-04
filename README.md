@@ -1,5 +1,5 @@
 ```
-📝 작업 관리 애플리케이션  
+# 📝 작업 관리 애플리케이션  
 
 ![License Badge](https://img.shields.io/badge/license-MIT-blue)  
 ![Python Badge](https://img.shields.io/badge/language-Python-green)  
@@ -9,8 +9,8 @@
 
 ---
 
-📖 프로젝트 설명  
-이 프로젝트는 Python을 기반으로 한 **작업 관리 애플리케이션**입니다.  
+## 📖 프로젝트 설명  
+이 프로젝트는 Python을 기반으로 한 **작업 관리 애플리케이션**입니다.
 사용자는 새로운 작업을 추가하고, 목록을 확인하며, 작업을 완료 처리하거나 삭제할 수 있습니다.  
 
 작업은 JSON 파일에 저장되어 프로그램을 종료하고 다시 실행해도 작업 데이터가 유지됩니다.  
@@ -18,7 +18,7 @@
 
 ---
 
-🐤 데모  
+## 🐤 데모  
 
 아래는 애플리케이션 실행 화면 예시입니다:  
 
@@ -96,7 +96,7 @@ task_manager/
 
 ## 👨‍💻 역할 및 기여  
 
-- **개발자**: [이규배]  
+- **개발자**: [Gyubae]  
     - CLI 기반 작업 관리 애플리케이션 설계 및 구현.  
     - JSON을 이용한 데이터 영구 저장 구현.  
     - 직관적인 메뉴 옵션 및 사용자 인터페이스 구성.  
@@ -105,7 +105,8 @@ task_manager/
 
 ## 👨‍👩‍👧‍👦 개발자  
 
-- [이규배](https://github.com/GyubaeLee)  
+- [Farmer](https://github.com/YSH1214)
+- [Gyubae](https://github.com/GyubaeLee)
 
 ---
 
