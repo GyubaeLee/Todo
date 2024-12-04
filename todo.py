@@ -17,7 +17,7 @@ def save_task(tasks): #add_task를 통해 전달받은 해야할 일을 파일�
         
 def add_task(task_name): # 할 일 추가
     tasks = load_task() # 파일이 있다면 가져와
-    task = {'name' : task_name, 'completed' : False} #파이썬 공부하기에 대한 데이터가 들어갔어
+    task = {'name' : task_name, 'completed': False} #파이썬 공부하기에 대한 데이터가 들어갔어
     tasks.append(task)
     save_task(tasks)
 
