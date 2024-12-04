@@ -34,7 +34,7 @@ def view_task(): # 할 일 목록 보기, merge 진행
                 
 def complete_task(task_number):#할 일 완료
     tasks = load_task() #tasks = [{"name":"파이썬 공부하기", "completed":True}]
-    if 1 <= task_number <= len(tasks):      #3번 입력한 경우는? 너 번호 잘못 입력했어 다시 입력해
+    if 1 <= task_number <= len(tasks): #3번 입력한 경우는? 너 번호 잘못 입력했어 다시 입력해
         tasks[task_number - 1]["completed"] = True  #tasks[0]["completed"] =>{"name":"파이썬 공부하기", "completed":false}  => false
         save_task(tasks)
         print(f"'할 일 : {tasks[task_number-1]["name"]}'이(가) 완료 처리되었습니다.")
