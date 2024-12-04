@@ -1,4 +1,3 @@
-```
 # 📝 작업 관리 애플리케이션  
 
 ![License Badge](https://img.shields.io/badge/license-MIT-blue)  
@@ -113,4 +112,3 @@ task_manager/
 ---
 
 이 프로젝트는 Python과 JSON 데이터 관리를 학습하는 초보자 또는 간단한 오프라인 작업 관리 도구를 찾는 사용자에게 적합합니다. 🚀
-```
