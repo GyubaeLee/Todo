@@ -7,11 +7,14 @@
         "name": "주식 터하기",
         "completed": false
 <<<<<<< HEAD
+<<<<<<< HEAD
     },
     {
         "name": "파이썬",
         "completed": false
 =======
 >>>>>>> feature/complete-tasks
+=======
+>>>>>>> feature/delete-tasks
     }
 ]
