@@ -1,5 +1,5 @@
 ```
-# 📝 작업 관리 애플리케이션  
+📝 작업 관리 애플리케이션  
 
 ![License Badge](https://img.shields.io/badge/license-MIT-blue)  
 ![Python Badge](https://img.shields.io/badge/language-Python-green)  
@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 프로젝트 설명  
+📖 프로젝트 설명  
 이 프로젝트는 Python을 기반으로 한 **작업 관리 애플리케이션**입니다.  
 사용자는 새로운 작업을 추가하고, 목록을 확인하며, 작업을 완료 처리하거나 삭제할 수 있습니다.  
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 🐤 데모  
+🐤 데모  
 
 아래는 애플리케이션 실행 화면 예시입니다:  
 
